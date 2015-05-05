@@ -9,7 +9,7 @@ int main(int argc, char* argv[])
         cout << "User: lab3 <Value>\n";
         exit(-1);
     }
-    int i = (int)(argv[1][0] - '0');
+    int i = stoi(argv[1]);
     print_preOrder(i);
     print_postOrder(i);
     print_inOrder(i);

@@ -4,11 +4,10 @@ reset
 set terminal png
 set xdata time
 set format x ""
-set xlabel "Data Size (n)"
-set ylabel "Time (ms)"
-set xrange [0:100000]
+set xlabel "xlabel"
+set ylabel "ylabel"
 set yrange [0:200]
-set title "Lab7 Plot"
+set title "plot title"
 set grid
 set style data linespoints
 

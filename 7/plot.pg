@@ -1,0 +1,19 @@
+#!/usr/bin/gnuplot
+
+reset
+set terminal png
+set xdata time
+set format x ""
+set xlabel "Data Size (n)"
+set ylabel "Time (ms)"
+set xrange [0:100000]
+set yrange [0:200]
+set title "Lab7 Plot"
+set grid
+set style data linespoints
+
+plot "data.txt" using 1:2 title 'tree-insert' with lines, \
+    "data.txt" using 1:3 title 'hash-insert' with lines, \
+    "data.txt" using 1:4 title 'tree-lookup' with lines, \
+    "data.txt" using 1:5 title 'hash_lookup' with lines
+    

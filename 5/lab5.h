@@ -1,7 +1,7 @@
 // Jonathan Tan
 // 861108230
 // 5/11
-// ?
+// Binary Search Tree
 #ifndef lab5_H
 #define lab5_H
 
@@ -135,8 +135,6 @@ class BST {
     void postorder() const {
         Node* head = root;
         POST_Output(head);
-        // Traverse and print the tree one Value per line in postorder.
-        // FILL IN
     }
     
     void IO_Output(Node* n) const
@@ -152,8 +150,6 @@ class BST {
     void inorder()const {
         Node* head = root;
         IO_Output(head);
-        // Traverse and print the tree one Value per line in inorder.
-        // FILL IN
     }
     
     void set_inorder(Node* curr, queue<Value>& list) 
@@ -188,44 +184,8 @@ class BST {
             ++count;
         }
         Node* found = new Node(list.front());
-        // while(count != n)
-        // {
-        //     list.pop();
-        //     count++;
-        // }
-        // cout << "FINISHED!" << endl;
         return found->value;
     }
-        
-        // stack<Value> reversed_tree_holder;
-        // Node* curr = root;
-        // while(curr != NULL)
-        // {
-        //     if(curr != NULL)
-        //     {
-        //         reversed_tree_holder.push(curr->value);
-        //         cout << curr->value << " ";
-        //         curr = curr->left;
-        //     }
-        //     else
-        //         curr = curr->right;
-        // }
-        // stack<Value> corrected_tree_holder;
-        // for(; !reversed_tree_holder.empty(); reversed_tree_holder.pop())
-        // {
-        //     cout << "Reversed tree top: " << reversed_tree_holder.top() << " ";
-        //     corrected_tree_holder.push(reversed_tree_holder.top());
-        // }
-        // int count = 0;
-        // while(count != n)
-        // {
-        //     corrected_tree_holder.pop();
-        //     count++;
-        // }
-        // return corrected_tree_holder.top();
-        // returns reference to the value field of the n-th Node.
-        // FILL IN
-    // }
 
     BST() : root(nil), count(0) {}
     void insert( Value X ) { root = insert( X, root ); }
@@ -246,8 +206,6 @@ class BST {
     
     void remove( Value X ) { root = remove( X, root ); }
     Node* remove( Value X, Node*& T ) {
-        // The normal binary-tree removal procedure ...
-        // Weiss’s code is faster but way more intricate.
         if ( T != nil ) {
             if ( X > T->value ) {
                 T->right = remove( X, T->right );
